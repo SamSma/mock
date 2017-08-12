@@ -83,6 +83,7 @@ img {
   height: auto;
   width: auto\9;
   /* ie8 */
+  border: none;
   -ms-interpolation-mode: bicubic;
   /*为了照顾ie图片缩放失真*/
 }
@@ -135,7 +136,7 @@ i {
 }
 body {
   font-family: Microsoft YaHei, '宋体', Tahoma, Arial, sans-serif;
-  color: #999;
+  color: #111111;
   font-size: 16px;
   background-color: #fff;
 }
@@ -148,7 +149,7 @@ strong {
 }
 a {
   text-decoration: none;
-  color: #999;
+  color: #111111;
   font-family: '微软雅黑', Microsoft YaHei, Tahoma, Arial, sans-serif;
 }
 ul,
@@ -167,9 +168,6 @@ h5,
 h6 {
   font-size: 100%;
   font-family: Microsoft YaHei;
-}
-img {
-  border: none;
 }
 button:active {
   opacity: 0.8;

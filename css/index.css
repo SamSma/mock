@@ -1,8 +1,8 @@
 .indexTop {
-  height: 64%;
+  height: 58%;
 }
 .indexBot {
-  height: 36%;
+  height: 42%;
   padding: 0.32rem 0.13rem 0;
 }
 .indexBot h3 {
@@ -19,7 +19,19 @@
   padding: 10px;
   border-radius: 3px;
 }
-@media screen and (device-width: 320px) {
+.indexBot .codeTwo {
+  padding: 0  0.2666rem;
+}
+.indexBot .codeTwo .codeTwoLeft {
+  width: 70%;
+}
+.indexBot .codeTwo .codeTwoLeft p {
+  line-height: 0.53rem;
+}
+.indexBot .codeTwo .codeTwoRight {
+  width: 25%;
+}
+@media screen and (max-width: 640px) {
   .indexBot .btns a {
     font-size: 12px;
   }
