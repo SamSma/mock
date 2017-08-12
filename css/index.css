@@ -1,0 +1,26 @@
+.indexTop {
+  height: 64%;
+}
+.indexBot {
+  height: 36%;
+  padding: 0.32rem 0.13rem 0;
+}
+.indexBot h3 {
+  color: #282727;
+  font-size: 20px;
+}
+.indexBot .btns {
+  width: 33.33%;
+  padding: 0 0.2666rem;
+}
+.indexBot .btns a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+}
+@media screen and (device-width: 320px) {
+  .indexBot .btns a {
+    font-size: 12px;
+  }
+}
