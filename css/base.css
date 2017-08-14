@@ -220,3 +220,15 @@ html {
 .mb-m {
   margin-bottom: 0.667rem;
 }
+.fixBg {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 96;
+  top: 0;
+  display: none;
+}
+.indexBot .btns .divNone {
+  display: none;
+}
