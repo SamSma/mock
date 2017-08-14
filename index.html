@@ -16,15 +16,33 @@
 </div>
 <div class="bg indexBot">
     <h3 class="text-center mb" >就是</h3>
-    <div class=" p-clear text-center mb-m">
+    <div id="btns" class=" p-clear text-center mb-m">
         <div  class="p-left btns ">
-            <a class="bg-red" href="javascript:;">查看排行榜</a>
+            <a class="bg-red" href="pick.html">我要抢月饼</a>
+           <!-- <a class="bg-red divNone" href="javascript:;">查看排行榜</a>
+            <div class="share shareOne ">
+                <img src="images/index/help.png" alt="">
+            </div>-->
         </div>
         <div  class="p-left btns ">
             <a class="bg-red" href="javascript:;">找好友助理</a>
+            <div class="share" >
+                <img src="images/index/share.png" alt="">
+            </div>
         </div>
         <div class="p-left btns ">
             <a class="bg-red" href="javascript:;">活动规则</a>
+            <div class="share shareThree" >
+                <h4 class="text-center">
+                    游戏规则
+                </h4>
+                <p class="text-left">
+                   游戏规则游戏规则 游戏规则游戏规则 游戏规则游戏规则
+                </p>
+                <p class="text-left">
+                    游戏规则游戏规则 游戏规则游戏规则 游戏规则游戏规则
+                </p>
+            </div>
         </div>
     </div>
     <div class="p-clear codeTwo">
@@ -39,7 +57,23 @@
         </div>
     </div>
 </div>
+<div class="fixBg"></div>
 
 
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#btns a").click(function () {
+        var num = $(this).siblings(".share").length;
+        if(num >0){
+            $(this).siblings(".share").show();
+            $(".fixBg").show();
+        }
+    })
+
+
+
+</script>
 </body>
 </html>
