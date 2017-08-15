@@ -18,7 +18,7 @@
 <img class="tishi" src="images/active/jiantou.png" alt="">
 
 
-<script src="js/zepto.js"></script>
+<script src="js/jquery.min.js"></script>
 
 <script>
 /*$(".move").addClass("ani");
@@ -28,12 +28,28 @@ setTimeout(function () {
         'background-image','url(images/active/end.jpg)'
     )
 },4000)*/
-$(".tishi").on("tap",function () {
-    $(".move").animate({
-        translate3d: '-50%,-100px,-100px'
-    }, 500, 'ease-out')
-})
+var y=0,z=0,i=0;
+$(".tishi").click(function () {
+            i++;
+           y -=100;
+           z -=100;
 
+        $(".move").css({
+            'transform': "translate3d(-50%,"+y+"px,"+z+"px)"
+        })
+    if(i==5){
+        $(".active").css(
+
+            'background-image','url(images/active/end.jpg)'
+        );
+        $(".move").hide();
+        setTimeout(function () {
+            location.href='./money.html'
+        },1000)
+        i=0;
+    }
+
+})
 </script>
 </body>
 </html>
