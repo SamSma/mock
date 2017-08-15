@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/active.css">
 </head>
 <body>
-<div class="active">
+<div id="active" class="active">
 
         <img  class="move" src="images/active/mouse.png" alt="">
 
@@ -28,27 +28,76 @@ setTimeout(function () {
         'background-image','url(images/active/end.jpg)'
     )
 },4000)*/
-var y=0,z=0,i=0;
-$(".tishi").click(function () {
-            i++;
-           y -=100;
-           z -=100;
-           $(".move").css({
-               'transform': "translate3d(-50%,"+y+"px,"+z+"px)"
-           })
-    if(i==4){
-        $(".active").css(
+k_touch();
+function k_touch() {
+    var y=0,z=0,i=0;
+    var _start = 0, _end = 0, _content = document.getElementById("active");
 
-            'background-image','url(images/active/end.jpg)'
-        );
-        $(".move").hide();
-        setTimeout(function () {
-            location.href='./money.html'
-        },1000)
-        i=0;
+    _content.addEventListener("touchstart", touchStart, false);
+    _content.addEventListener("touchmove", touchMove, false);
+    _content.addEventListener("touchend", touchEnd, false);
+
+    function touchStart(event) {
+
+        var touch = event.targetTouches[0];
+        _start = touch.pageX || touch.clientX;
+        _y = touch.pageY || touch.clientY;
+
+    }
+    function touchMove(event) {
+        var touch = event.targetTouches[0];
+        var obj = {
+            x:_start - touch.pageX||touch.clientX,
+            y: _y - touch.pageY||touch.clientY
+        }
+        var isScrool =  Math.abs(obj.x) < Math.abs(obj.y) ? 1:0;//isScrolling为1时，表示纵向滑动，0为横向滑动
+       // console.log(isScrool === 0)
+
+        /* if(isScrool === 0){
+         event.preventDefault(); //阻止触摸事件的默认行为，即阻止滚屏
+         }*/
+        event.preventDefault();
+
+        _end = (_y - touch.pageY||touch.clientY );
+
     }
 
-})
+    function touchEnd(event) {
+
+        if (_end < -100) {
+
+            return ;
+
+        }else if(_end > 100){
+            i++;
+         /*   y -=100;
+            z -=100;*/
+            var timer =setInterval(function () {
+                $(".move").css({
+                    'transform': "translate3d(-50%,"+y--+"px,"+z--+"px)"
+                })
+                if(y == -100*i){
+                    clearInterval(timer);
+                }
+            },10)
+            console.log(i)
+            if(i==4){
+                $(".active").css(
+
+                    'background-image','url(images/active/end.jpg)'
+                );
+                $(".move").hide();
+                setTimeout(function () {
+                    location.href='./money.html'
+                },1000)
+                i=0;
+            }
+        }
+        _end=0;
+    }
+}
+
+
 </script>
 </body>
 </html>
