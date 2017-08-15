@@ -15,17 +15,25 @@
         <img  class="move" src="images/active/mouse.png" alt="">
 
 </div>
+<img class="tishi" src="images/active/jiantou.png" alt="">
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script src="js/zepto.js"></script>
+
 <script>
-$(".move").addClass("ani");
+/*$(".move").addClass("ani");
 setTimeout(function () {
     $(".move").hide();
     $(".active").css(
         'background-image','url(images/active/end.jpg)'
     )
-},4000)
-    
+},4000)*/
+$(".tishi").on("tap",function () {
+    $(".move").animate({
+        translate3d: '-50%,-100px,-100px'
+    }, 500, 'ease-out')
+})
+
 </script>
 </body>
 </html>

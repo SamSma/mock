@@ -71,8 +71,12 @@
             $(".fixBg").show();
         }
     })
-
-
+    $(".fixBg").click(function () {
+        closed();
+    })
+    function closed() {
+        $(".fixBg,.share").hide();
+    }
 
 </script>
 </body>
