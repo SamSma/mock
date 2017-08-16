@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  verflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+.w80 {
+  width: 80%;
+  margin: 0 auto;
+}
+body {
+  background: url("../images/money/bg.jpg") no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+h4 {
+  height: 4rem;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 2rem;
+}
+.mokuai {
+  background: rgba(250, 250, 250, 0.8);
+  border-radius: 5px;
+  height: 70%;
+  overflow-y: auto;
+  verflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+.mokuai span {
+  display: inline-block;
+  width: 20%;
+  line-height: 1rem;
+  color: #333;
+}
+.mokuai img {
+  max-width: 0.4rem;
+}
+.mokuai span:last-child {
+  width: 50%;
+}
