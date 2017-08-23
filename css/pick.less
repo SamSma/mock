@@ -1,12 +1,15 @@
+
 .pickBg{
   height: 100%;
   width: 100%;
   background: url("../images/pick/pick.jpg") no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
+
   .btn{
     background: #FDC92A;
     position: fixed;
+    display: none;
     top:70%;
     left: 50%;
     transform: translate3d(-50%,0,0);
@@ -15,5 +18,63 @@
     padding:0.2rem 0.5rem;
     border-radius: 3px;
     font-size: 18px;
+  }
+}
+#btns{
+
+  .btns{
+
+    width: 33.33%;
+    padding:0 0.2666rem;
+    position: relative;
+
+    a{
+      display: block;  color: #fff;
+      padding: 10px;
+      border-radius: 3px;
+    }
+    .share{
+      position: absolute;width: 12rem;
+      top: -500%;
+      left: -50%;
+      z-index: 99;
+      display: none;
+      &.shareOne{
+        left: 40%;
+        top: -470%;
+        width: 6.1rem;
+      }
+      &.shareThree{
+        width: 17.5rem;
+        left: -50%;
+        top: -800%;
+        height:24rem;
+        transform: translate3d(-50%,0,0);
+        -webkit-transform: translate3d(-50%,0,0);
+        background: url("../images/index/bang.png") no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        color: #fff;
+        padding: 0.4rem  0.9rem 0.4rem 1.6rem ;
+        h4{
+          font-size: 18px;
+          padding:10px 0;
+        }
+        p{
+          text-indent: 2em;
+
+        }
+      }
+
+    }
+  }
+
+}
+@media screen and (max-width:640px){
+
+  #btns{
+    .btns{
+      a{font-size: 12px;}
+    }
   }
 }

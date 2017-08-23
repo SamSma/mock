@@ -28,7 +28,7 @@ setTimeout(function () {
         'background-image','url(images/active/end.jpg)'
     )
 },4000)*/
-k_touch();
+/*k_touch();*/
 function k_touch() {
     var y=0,z=0,i=0;
     var _start = 0, _end = 0, _content = document.getElementById("active");
@@ -95,8 +95,39 @@ function k_touch() {
         }
         _end=0;
     }
-}
+};
+var num = 0
+$(".tishi").click(function () {
+    num++;
+    if(num==1){
+        $(".move").css({
+            'transform': "translate3d(-80%,-0.4rem,-2.6rem)"
+        })
+        $(".move").prop({
+            src:"images/active/mouse1.png"
+        })
+    }else if(num==2){
+        $(".move").css({
+            'transform': "translate3d(-30%,-1.6rem,-4rem)"
+        })
+        $(".move").prop({
+            src:"images/active/mouse2.png"
+        })
+    }else{
+        $(".move").prop({
+            src:"images/active/mouse.png"
+        })
+        $(".move").css({
+            'transform': "translate3d(-50%,-200px,-240px)"
+        })
 
+      /*  setTimeout(function () {
+            num=0;
+            location.href='./money.html'
+        },1000)*/
+    }
+
+})
 
 </script>
 </body>
