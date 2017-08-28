@@ -12,8 +12,8 @@
 <body>
 <div class="pickBg">
 
-    <div style="height:70%">
-
+    <div style="height:70%;position: relative;">
+        <a id="pai" style="position: absolute;right:5px;color: #fff;font-size: 12px;top:5px;padding:5px;background: #FD4E4E;" href="javascript:;">排行榜</a>
     </div>
 
 <div id="btns" class=" p-clear text-center mb-m">
@@ -48,6 +48,39 @@
 </div>
 </div>
 <div class="fixBg"></div>
+<ul class="mokuai">
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+    <li class="p-clear text-center">
+        <span class="mok ">Tom</span> <span><img src="images/money/1.png" alt=""></span><span>10</span>
+    </li>
+</ul>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
     $("#btns a").click(function () {
@@ -61,7 +94,7 @@
         closed();
     })
     function closed() {
-        $(".fixBg,.share").hide();
+        $(".fixBg,.share,.mokuai").hide();
         $(".fixBg").empty();
     }
     showImg();
@@ -69,6 +102,10 @@
         var img = '<img style="width: 80%;margin: 0 auto;display: block;" src="images/index/index.png"/>';
         $(".fixBg").show().append(img)
     }
+    $("#pai").click(function () {
+        $(".fixBg").show();
+        $(".mokuai").show();
+    })
 </script>
 </body>
 </html>
