@@ -22,18 +22,19 @@
   width: 33.33%;
   padding: 0 0.2666rem;
   position: relative;
+  margin: 10px auto;
 }
 #btns .btns a {
   display: block;
   color: #fff;
-  padding: 10px;
+  padding: 5px ;
   border-radius: 30px;
 }
 #btns .btns .share {
   position: absolute;
   width: 12rem;
-  top: -500%;
-  left: -50%;
+  top: -315%;
+  left: -40%;
   z-index: 99;
   display: none;
 }
@@ -44,7 +45,7 @@
 }
 #btns .btns .share.shareThree {
   width: 17.5rem;
-  left: -50%;
+  left: 50%;
   top: -800%;
   height: 24rem;
   transform: translate3d(-50%, 0, 0);
